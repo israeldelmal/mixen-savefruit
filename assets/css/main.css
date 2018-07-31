@@ -31,6 +31,30 @@ body {
 	background-color: rgb(255, 255, 255);
 }
 
+	body > button {
+		display         : none;
+		width           : 32px;
+		background-color: transparent;
+		border          : none;
+		position        : fixed;
+		top             : 24px;
+		left            : 24px;
+	}
+
+		body > button > span {
+			display         : block;
+			width           : 100%;
+			height          : 1px;
+			margin-bottom   : 3px;
+			background-color: rgb(255, 255, 255);
+			box-shadow      : 0 0 1px rgb(0, 0, 0);
+			transition      : all 0.3s;
+		}
+
+		body > button > span:last-of-type {
+			margin-bottom: 0px;
+		}
+
 	body > nav {
 		position        : fixed;
 		top             : 170px;
@@ -55,6 +79,7 @@ body {
 			align-items     : center;
 			margin-left     : -104px;
 			margin-bottom   : 4px;
+			position        : relative;
 		}
 
 		body > nav > a:hover {
@@ -168,7 +193,7 @@ body {
 				width: 100%;
 			}
 
-		body > header > main {
+		body > header > section {
 			color          : rgb(255, 255, 255);
 			display        : flex;
 			align-items    : center;
@@ -178,22 +203,22 @@ body {
 			margin-top     : 120px;
 		}
 
-			body > header > main > h1 {
+			body > header > section > h1 {
 				font-size  : 2.5em;
 				font-weight: 400;
 			}
 
-				body > header > main > h1 > span {
+				body > header > section > h1 > span {
 					display: block;
 				}
 
-				body > header > main > h1 > span:first-of-type {
+				body > header > section > h1 > span:first-of-type {
 					font-family  : Dulcelin;
 					font-size    : 2em;
 					margin-bottom: -24px;
 				}
 
-			body > header > main > a {
+			body > header > section > a {
 				display      : inline-block;
 				padding      : 6px 18px;
 				border-radius: 6px;
@@ -202,13 +227,13 @@ body {
 				margin-top   : 40px;
 			}
 
-	body > #nosotros {
+	#nosotros {
 		width        : 100%;
 		position     : relative;
 		margin-bottom: -15px;
 	}
 
-	body > #nosotros:after {
+	#nosotros:after {
 		content          : '';
 		width            : 100%;
 		height           : 15px;
@@ -220,7 +245,7 @@ body {
 		left             : 0px;
 	}
 
-	body > #nosotros:before {
+	#nosotros:before {
 		content          : '';
 		width            : 100%;
 		height           : 15px;
@@ -233,13 +258,13 @@ body {
 		z-index          : 10;
 	}
 
-		body > #nosotros > section {
+		#nosotros > section {
 			width           : 100%;
 			padding         : 80px 0px;
 			background-color: rgb(255, 255, 255);
 		}
 
-			body > #nosotros > section > section {
+			#nosotros > section > section {
 				width          : 80%;
 				margin         : auto;
 				display        : flex;
@@ -248,34 +273,34 @@ body {
 				align-items    : center;
 			}
 
-				body > #nosotros > section > section > section {
+				#nosotros > section > section > section {
 					width: 50%;
 				}
 
-					body > #nosotros > section > section > section:first-of-type > h1 {
+					#nosotros > section > section > section:first-of-type > h1 {
 						font-family  : Dulcelin;
 						color        : rgb(248, 151, 34);
 						font-size    : 3em;
 						margin-bottom: 24px;
 					}
 
-					body > #nosotros > section > section > section:first-of-type > p {
+					#nosotros > section > section > section:first-of-type > p {
 						margin-bottom: 24px;
 						text-align   : justify;
 					}
 
-						body > #nosotros > section > section > section:first-of-type > p > strong {
+						#nosotros > section > section > section:first-of-type > p > strong {
 							display    : block;
 							font-weight: 700;
 						}
 
-					body > #nosotros > section > section > section:first-of-type > ul {
+					#nosotros > section > section > section:first-of-type > ul {
 						list-style : none;
 						display    : flex;
 						align-items: center;
 					}
 
-						body > #nosotros > section > section > section:first-of-type > ul > li {
+						#nosotros > section > section > section:first-of-type > ul > li {
 							display            : flex;
 							width              : 150px;
 							height             : 150px;
@@ -295,50 +320,50 @@ body {
 							text-shadow        : 0 0 1px rgb(0, 0, 0);
 						}
 
-						body > #nosotros > section > section > section:first-of-type > ul > li:last-of-type {
+						#nosotros > section > section > section:first-of-type > ul > li:last-of-type {
 							margin-right: 0px;
 						}
 
-					body > #nosotros > section > section > section:last-of-type > img {
+					#nosotros > section > section > section:last-of-type > img {
 						margin: auto;
 					}
 
-	body > #ventajas {
+	#ventajas {
 		width          : 100%;
-		height         : 650px;
 		position       : relative;
 		display        : flex;
 		flex-flow      : row wrap;
 		justify-content: space-between;
 	}
 
-		body > #ventajas > section {
-			width           : 50%;
-			background-image: url('../images/ventajas/fondo-1.png');
-			background-size : cover;
-			display         : flex;
-			justify-content : center;
-			position        : relative;
-			padding-top     : 120px;
+		#ventajas > section {
+			width          : 50%;
+			height         : 650px;
+			background-size: cover;
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+			position       : relative;
 		}
 
-			body > #ventajas > section > img {
-				width   : 50%;
+			#ventajas > section > img {
+				width   : 35%;
 				bottom  : -120px;
 				position: absolute;
+				z-index : 50;
 			}
 
-			body > #ventajas > section > section {
+			#ventajas > section > section {
 				width: 75%;
 			}
 
-				body > #ventajas > section > section > h1 {
+				#ventajas > section > section > h1 {
 					color      : rgb(227, 40, 53);
 					font-family: Dulcelin;
 					font-size  : 3em;
 				}
 
-				body > #ventajas > section > section > sub {
+				#ventajas > section > section > sub {
 					color        : rgb(227, 40, 53);
 					font-size    : 2em;
 					font-weight  : 400;
@@ -347,7 +372,7 @@ body {
 					display      : block;
 				}
 
-				body > #ventajas > section > section > ul {
+				#ventajas > section > section > ul {
 					list-style     : none;
 					display        : flex;
 					flex-flow      : row wrap;
@@ -355,33 +380,61 @@ body {
 					margin-bottom  : 32px;
 				}
 
-					body > #ventajas > section > section > ul > li {
+					#ventajas > section > section > ul > li {
 						display  : block;
 						width    : 50%;
 						font-size: 1.25em;
 					}
 
-						body > #ventajas > section > section > ul > li > i {
+						#ventajas > section > section > ul > li > i {
 							margin-right: 12px;
 							color       : rgb(31, 145, 55);
 						}
 
-		body > #ventajas > section:first-of-type {
-			background-color: rgb(185, 241, 106);
+		#ventajas > section:nth-of-type(1) {
+			background-color: rgb(234, 234, 234);
 		}
 
-		body > #ventajas > section:last-of-type {
-			background-color: rgb(247, 176, 35);
+		#ventajas > section:nth-of-type(2) {
+			background-color: rgb(234, 234, 234);
 		}
 
-			body > #ventajas > section:last-of-type > section > h2 {
+		#ventajas > section:nth-of-type(3) {
+			background-color: rgb(252, 244, 217);
+		}
+
+		#ventajas > section:nth-of-type(4) {
+			background-color: rgb(252, 244, 217);
+		}
+
+		#ventajas > section:nth-of-type(1):before,
+		#ventajas > section:nth-of-type(3):before {
+			content         : '';
+			width           : 1px;
+			height          : 75%;
+			background-color: rgb(227, 40, 53);
+			position        : absolute;
+			right           : 0px;
+		}
+
+		#ventajas > section:nth-of-type(2):before,
+		#ventajas > section:nth-of-type(4):before {
+			content         : '';
+			width           : 1px;
+			height          : 75%;
+			background-color: rgb(227, 40, 53);
+			position        : absolute;
+			left            : 0px;
+		}
+
+			#ventajas > section:last-of-type > section > h2 {
 				color      : rgb(227, 40, 53);
 				font-family: Dulcelin;
 				font-size  : 2em;
 				margin-top : 32px;
 			}
 
-	body > #galeria {
+	#galeria {
 		width           : 100%;
 		padding         : 120px 0px 80px 0px;
 		background-color: rgb(255, 255, 255);
@@ -391,17 +444,17 @@ body {
 		flex-direction  : column;
 	}
 
-		body > #galeria > img {
+		#galeria > img {
 			width: 100px;
 		}
 
-		body > #galeria > h1 {
+		#galeria > h1 {
 			font-size  : 3em;
 			font-family: Dulcelin;
 			color      : rgb(248, 151, 34);
 		}
 
-		body > #galeria > sub {
+		#galeria > sub {
 			font-size    : 1.75em;
 			font-weight  : 300;
 			color        : rgb(248, 151, 34);
@@ -409,27 +462,27 @@ body {
 			margin-bottom: 32px;
 		}
 
-		body > #galeria > section {
+		#galeria > section {
 			width          : 80%;
 			display        : flex;
 			flex-flow      : row wrap;
 			justify-content: space-between;
 		}
 
-			body > #galeria > section > div {
+			#galeria > section > div {
 				width: 25%;
 			}
 
-				body > #galeria > section > div > img {
+				#galeria > section > div > img {
 					width: 100%;
 				}
 
-	body > #clientes {
+	#clientes {
 		width   : 100%;
 		position: relative;
 	}
 
-	body > #clientes:after {
+	#clientes:after {
 		content          : '';
 		width            : 100%;
 		height           : 15px;
@@ -441,7 +494,7 @@ body {
 		left             : 0px;
 	}
 
-	body > #clientes:before {
+	#clientes:before {
 		content          : '';
 		width            : 100%;
 		height           : 15px;
@@ -454,13 +507,13 @@ body {
 		z-index          : 10;
 	}
 
-		body > #clientes > section {
+		#clientes > section {
 			width           : 100%;
 			background-color: rgb(247, 176, 35);
 			padding         : 80px 0px;
 		}
 
-			body > #clientes > section > section {
+			#clientes > section > section {
 				width          : 80%;
 				margin         : auto;
 				display        : flex;
@@ -469,9 +522,134 @@ body {
 				align-items    : center;
 			}
 
-				body > #clientes > section > section > img {
+				#clientes > section > section > img {
 					max-width: 100%;
 				}
+
+	#blog {
+		width          : 100%;
+		padding        : 80px 0px;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		flex-direction : column;
+	}
+
+		#blog > img {
+			width: 100px;
+		}
+
+		#blog > h1 {
+			font-size  : 3em;
+			font-family: Dulcelin;
+			color      : rgb(248, 151, 34);
+		}
+
+		#blog > sub {
+			font-size    : 1.75em;
+			font-weight  : 300;
+			color        : rgb(248, 151, 34);
+			margin-top   : -12px;
+			margin-bottom: 32px;
+		}
+
+		#blog > main {
+			width          : 80%;
+			margin-bottom  : 32px;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+		}
+
+			#blog > main > article {
+				width: 32%;
+			}
+
+				#blog > main > article > header {
+					width              : 100%;
+					height             : 250px;
+					background-color   : rgba(0, 0, 0, 0.12);
+					position           : relative;
+					background-position: center;
+					background-size    : cover;
+				}
+
+					#blog > main > article > header > time {
+						width           : 100%;
+						position        : absolute;
+						bottom          : 0px;
+						background-color: rgba(0, 0, 0, 0.5);
+						color           : rgb(255, 255, 255);
+						text-align      : center;
+						padding         : 16px 0px;
+						font-size       : 0.75em;
+						font-weight     : 700;
+					}
+
+				#blog > main > article > h1 {
+					font-size     : 1.25em;
+					font-weight   : 700;
+					text-transform: uppercase;
+					margin        : 12px 0px;
+					text-align    : center;
+				}
+
+				#blog > main > article > p {
+					text-align   : justify;
+					margin-bottom: 12px;
+				}
+
+				#blog > main > article > a {
+					display       : flex;
+					width         : 100%;
+					color         : rgb(31, 145, 55);
+					font-size     : 0.85em;
+					text-transform: uppercase;
+					align-items   : center;
+					position      : relative;
+				}
+
+					#blog > main > article > a:hover > span {
+						color: rgb(248, 151, 34);
+					}
+
+				#blog > main > article > a:before {
+					content         : '';
+					position        : absolute;
+					width           : 100%;
+					height          : 5%;
+					background-color: rgb(31, 145, 55);
+					z-index         : 5;
+					transition      : all 0.3s ease-out;
+				}
+
+				#blog > main > article > a:hover:before {
+					background-color: rgb(248, 151, 34);
+				}
+
+					#blog > main > article > a > span {
+						display         : inline-block;
+						font-weight     : 700;
+						position        : relative;
+						background-color: rgb(255, 255, 255);
+						padding-right   : 8px;
+						z-index         : 10;
+					}
+
+		#blog > a {
+			font-weight   : 700;
+			font-size     : 0.75em;
+			text-transform: uppercase;
+			color         : rgb(31, 145, 55);
+			padding       : 6px 12px;
+			border        : 1px solid rgb(31, 145, 55);
+			transition    : all 0.3s ease-out;
+		}
+
+		#blog > a:hover {
+			color           : rgb(255, 255, 255);
+			background-color: rgb(31, 145, 55);
+		}
 
 	body > footer {
 		width: 100%;
@@ -666,3 +844,770 @@ body {
 					display    : block;
 					margin-left: 6px;
 				}
+
+@media screen and (max-width: 1440px) {
+	#nosotros > section > section {
+		width: 85%;
+	}
+
+	#galeria > section {
+		width: 85%;
+	}
+
+	#clientes > section > section {
+		width: 85%;
+	}
+
+	#blog > main {
+		width: 85%;
+	}
+
+	body > footer > section > section {
+		width: 85%;
+	}
+}
+
+@media all and (orientation: landscape) and (max-width: 1030px) {
+	body > nav {
+		top: 4px;
+	}
+
+		body > header > nav {
+			display: none;
+		}
+
+		body > header > section {
+			margin-top: 0px;
+		}
+
+			body > header > section > h1 {
+				font-size: 2em;
+			}
+
+				body > header > section > h1 > span:first-of-type {
+					font-size: 1.5em;
+				}
+
+			#nosotros > section > section {
+				width: 85%;
+			}
+
+				#nosotros > section > section > section {
+					width: 100%;
+				}
+
+				#nosotros > section > section > section:last-of-type {
+					margin-top: 32px;
+				}
+
+					#nosotros > section > section > section:first-of-type > h1 {
+						font-size: 2em;
+					}
+
+					#nosotros > section > section > section:first-of-type > ul {
+						width          : 100%;
+						justify-content: center;
+					}
+
+			#ventajas > section > img {
+				width : 50%;
+				bottom: -72px;
+			}
+
+				#ventajas > section > section > h1 {
+					font-size: 2em;
+				}
+
+				#ventajas > section > section > sub {
+					font-size  : 1.5em;
+					margin-top : 0px;
+					line-height: 1em;
+				}
+
+				#ventajas > section > section > ul {
+					list-style     : none;
+					display        : flex;
+					flex-flow      : row wrap;
+					justify-content: space-between;
+					margin-bottom  : 32px;
+				}
+
+					#ventajas > section > section > ul > li {
+						display  : block;
+						width    : 50%;
+						font-size: 1.25em;
+					}
+
+						#ventajas > section > section > ul > li > i {
+							margin-right: 12px;
+							color       : rgb(31, 145, 55);
+						}
+
+			#ventajas > section:last-of-type > section > h2 {
+				font-size: 1.75em;
+			}
+
+		#galeria > h1 {
+			font-size: 2em;
+		}
+
+		#galeria > sub {
+			font-size: 1.5em;
+		}
+
+		#galeria > section {
+			width: 85%;
+		}
+
+			#clientes > section > section {
+				width: 85%;
+			}
+
+				#clientes > section > section > img {
+					max-width: none;
+					width    : 23%;
+				}
+
+		#blog > h1 {
+			font-size: 2em;
+		}
+
+		#blog > sub {
+			font-size: 1.5em;
+		}
+
+		#blog > main {
+			width: 85%;
+		}
+
+			#blog > main > article {
+				width: 32%;
+			}
+
+				#blog > main > article > header {
+					height: 200px;
+				}
+
+	body > footer {
+		width: 100%;
+	}
+
+		body > footer > header {
+			height: auto;
+		}
+
+			body > footer > header > section {
+				width : 100%;
+				height: 500px;
+			}
+
+			body > footer > header > map {
+				width : 100%;
+				height: 250px;
+			}
+
+			body > footer > section > section {
+				width: 85%;
+			}
+
+					body > footer > section > section > section:last-of-type > img {
+						height       : 200px;
+						margin-bottom: 32px;
+					}
+
+						body > footer > section > section > section:last-of-type > ul > li {
+							display      : inline-block;
+							margin-right : 4px;
+							margin-bottom: 0px;
+						}
+
+						body > footer > section > section > section:last-of-type > ul > li:last-of-type {
+							margin-right: 0px;
+						}
+
+							body > footer > section > section > section:last-of-type > ul > li > a {
+								font-weight: 300;
+							}
+}
+
+@media all and (orientation: portrait) and (max-width: 770px) {
+	body > nav {
+		top: 4px;
+	}
+
+		body > header > nav {
+			display: none;
+		}
+
+		body > header > section {
+			margin-top: 0px;
+		}
+
+			body > header > section > h1 {
+				font-size: 1.75em;
+			}
+
+				body > header > section > h1 > span:last-of-type {
+					margin-top: 16px;
+				}
+
+			#nosotros > section > section {
+				width: 85%;
+			}
+
+				#nosotros > section > section > section {
+					width: 100%;
+				}
+
+					#nosotros > section > section > section:first-of-type {
+						margin-bottom: 32px;
+					}
+
+					#nosotros > section > section > section:first-of-type > h1 {
+						font-size: 2em;
+					}
+
+					#nosotros > section > section > section:first-of-type > ul {
+						width          : 100%;
+						justify-content: space-between;
+					}
+
+		#ventajas > section {
+			width: 100%;
+		}
+
+			#ventajas > section > img {
+				bottom  : -60px;
+			}
+
+			#ventajas > section > section {
+				width: 85%;
+			}
+
+				#ventajas > section > section > h1 {
+					font-size: 2.5em;
+					margin-bottom: 12px;
+				}
+
+				#ventajas > section > section > sub {
+					font-size: 1.5em;
+				}
+
+		#ventajas > section:nth-of-type(1) {
+			background-color: rgb(234, 234, 234);
+		}
+
+		#ventajas > section:nth-of-type(3) {
+			background-color: rgb(234, 234, 234);
+		}
+
+		#ventajas > section:nth-of-type(4) {
+			background-color: rgb(252, 244, 217);
+		}
+
+		#ventajas > section:nth-of-type(2) {
+			background-color: rgb(252, 244, 217);
+		}
+
+		#ventajas > section:nth-of-type(1):before,
+		#ventajas > section:nth-of-type(3):before {
+			display: none;
+		}
+
+		#ventajas > section:nth-of-type(2):before,
+		#ventajas > section:nth-of-type(4):before {
+			display: none;
+		}
+
+			#ventajas > section:last-of-type > section > h2 {
+				color      : rgb(227, 40, 53);
+				font-family: Dulcelin;
+				font-size  : 2em;
+				margin-top : 32px;
+			}
+
+		#galeria > h1 {
+			font-size: 2em;
+		}
+
+		#galeria > sub {
+			font-size: 1.5em;
+		}
+
+		#galeria > section {
+			width: 85%;
+		}
+
+			#clientes > section > section {
+				width: 85%;
+			}
+
+				#clientes > section > section > img {
+					max-width: none;
+					width    : 23%;
+				}
+
+		#blog > h1 {
+			font-size: 2em;
+		}
+
+		#blog > sub {
+			font-size: 1.5em;
+		}
+
+		#blog > main {
+			width: 85%;
+		}
+
+			#blog > main > article {
+				width        : 100%;
+				margin-bottom: 32px;
+			}
+
+			#blog > main > article:last-of-type {
+				margin-bottom: 0px;
+			}
+
+		body > footer > header {
+			height: auto;
+		}
+
+			body > footer > header > section {
+				width: 100%;
+			}
+
+				body > footer > header > section > section:first-of-type {
+					width  : 85%;
+					padding: 40px 0px;
+				}
+
+					body > footer > header > section > section > h1 {
+						font-size  : 2em;
+					}
+
+					body > footer > header > section > section > sub {
+						font-size: 1.25em;
+					}
+
+			body > footer > header > map {
+				width : 100%;
+				height: 250px;
+			}
+
+			body > footer > section > section {
+				width: 85%;
+			}
+
+				body > footer > section > section > section {
+					width: 50%;
+				}
+}
+
+@media all and (orientation: landscape) and (max-width: 740px) {
+	body > nav {
+		top: 4px;
+	}
+
+		body > header > nav {
+			display: none;
+		}
+
+		body > header > section {
+			margin-top: 0px;
+		}
+
+			body > header > section > h1 {
+				font-size: 1.5em;
+			}
+
+				body > header > section > h1 > span:first-of-type {
+					font-size: 1.25em;
+				}
+
+			#nosotros > section > section {
+				width: 85%;
+			}
+
+				#nosotros > section > section > section {
+					width: 100%;
+				}
+
+				#nosotros > section > section > section:last-of-type {
+					margin-top: 32px;
+				}
+
+					#nosotros > section > section > section:first-of-type > h1 {
+						font-size: 2em;
+					}
+
+					#nosotros > section > section > section:first-of-type > ul {
+						width          : 100%;
+						justify-content: center;
+					}
+
+			#ventajas > section > img {
+				width : 50%;
+				bottom: -72px;
+			}
+
+				#ventajas > section > section > h1 {
+					font-size: 2em;
+				}
+
+				#ventajas > section > section > sub {
+					font-size  : 1.5em;
+					margin-top : 0px;
+					line-height: 1em;
+				}
+
+				#ventajas > section > section > ul {
+					list-style     : none;
+					display        : flex;
+					flex-flow      : row wrap;
+					justify-content: space-between;
+					margin-bottom  : 32px;
+				}
+
+					#ventajas > section > section > ul > li {
+						display  : block;
+						width    : 50%;
+						font-size: 1.25em;
+					}
+
+						#ventajas > section > section > ul > li > i {
+							margin-right: 12px;
+							color       : rgb(31, 145, 55);
+						}
+
+			#ventajas > section:last-of-type > section > h2 {
+				font-size: 1.75em;
+			}
+
+		#galeria > h1 {
+			font-size: 2em;
+		}
+
+		#galeria > sub {
+			font-size: 1.5em;
+		}
+
+		#galeria > section {
+			width: 85%;
+		}
+
+			#clientes > section > section {
+				width: 85%;
+			}
+
+				#clientes > section > section > img {
+					max-width: none;
+					width    : 23%;
+				}
+
+		#blog > h1 {
+			font-size: 2em;
+		}
+
+		#blog > sub {
+			font-size: 1.5em;
+		}
+
+		#blog > main {
+			width: 85%;
+		}
+
+			#blog > main > article {
+				width        : 100%;
+				margin-bottom: 32px;
+			}
+
+			#blog > main > article:last-of-type {
+				margin-bottom: 0px;
+			}
+
+				#blog > main > article > header {
+					height: 250px;
+				}
+
+	body > footer {
+		width: 100%;
+	}
+
+		body > footer > header {
+			height: auto;
+		}
+
+			body > footer > header > section {
+				width : 100%;
+				height: 500px;
+			}
+
+			body > footer > header > map {
+				width : 100%;
+				height: 250px;
+			}
+
+			body > footer > section > section {
+				width: 85%;
+			}
+
+				body > footer > section > section > section {
+					width: 50%;
+				}
+
+					body > footer > section > section > section:last-of-type > img {
+						height       : 200px;
+						margin-bottom: 32px;
+					}
+
+						body > footer > section > section > section:last-of-type > ul > li {
+							display      : inline-block;
+							margin-right : 4px;
+							margin-bottom: 0px;
+						}
+
+						body > footer > section > section > section:last-of-type > ul > li:last-of-type {
+							margin-right: 0px;
+						}
+
+							body > footer > section > section > section:last-of-type > ul > li > a {
+								font-weight: 300;
+							}
+}
+
+@media all and (orientation: portrait) and (max-width: 420px) {
+	body > button {
+		display: block;
+		z-index: 100;
+	}
+
+	.active-span {
+		margin-bottom: 8px;
+	}
+
+	.active-span:last-of-type {
+		margin-bottom: 0px;
+	}
+
+	body > nav {
+		width           : 100%;
+		height          : 100vh;
+		background-color: rgb(227, 33, 63);
+		top             : 0px;
+		left            : 0px;
+		display         : flex;
+		align-items     : center;
+		justify-content : center;
+		flex-direction  : column;
+		top             : -100vh;
+		transition      : all 0.3s ease-out;
+		z-index         : 90;
+	}
+
+	.active-nav {
+		top: 0;
+	}
+
+		body > nav > a {
+			width           : 100%;
+			font-size       : 1em;
+			font-weight     : 400;
+			text-shadow     : none;
+			background-color: transparent;
+			display         : initial;
+			flex-flow       : row wrap;
+			justify-content : space-between;
+			align-items     : center;
+			margin-left     : 0px;
+			margin-bottom   : 0px;
+			position        : relative;
+			text-align      : center;
+		}
+
+		body > nav > a:hover {
+			margin-left     : 0px;
+			background-color: rgb(227, 33, 63);
+		}
+
+			body > nav > a > i {
+				display: none !important;
+			}
+
+		body > header > section {
+			margin-top: 0px;
+		}
+
+			body > header > section > h1 {
+				width      : 90%;
+				margin     : auto;
+				text-align : center;
+				font-size  : 1.75em;
+				font-weight: 400;
+				line-height: 1em;
+			}	
+
+				body > header > section > h1 > span:first-of-type {
+					font-size: 2em;
+					display: block;
+					margin-bottom: 16px;
+				}
+
+			body > header > section > sub {
+				display   : block;
+				width     : 90%;
+				text-align: center;
+			}
+
+			#nosotros > section > section {
+				width: 90%;
+			}
+
+				#nosotros > section > section > section {
+					width: 100%;
+				}
+
+					#nosotros > section > section > section:first-of-type > h1 {
+						font-size: 2.5em;
+					}
+
+					#nosotros > section > section > section:first-of-type > ul {
+						width          : 100%;
+						justify-content: space-between;
+					}
+
+						#nosotros > section > section > section:first-of-type > ul > li {
+							width    : 100px;
+							height   : 100px;
+							font-size: 0.65em;
+						}
+
+					#nosotros > section > section > section:last-of-type > img {
+						width: 100%;
+						margin: auto;
+					}
+
+		#ventajas > section {
+			width: 100%;
+		}
+
+			#ventajas > section > img {
+				width   : 50%;
+				bottom  : -80px;
+			}
+
+			#ventajas > section > section {
+				width: 90%;
+			}
+
+				#ventajas > section > section > h1 {
+					font-size: 2em;
+				}
+
+				#ventajas > section > section > sub {
+					font-size: 1.25em;
+				}
+
+		#ventajas > section:nth-of-type(1) {
+			background-color: rgb(234, 234, 234);
+		}
+
+		#ventajas > section:nth-of-type(3) {
+			background-color: rgb(234, 234, 234);
+		}
+
+		#ventajas > section:nth-of-type(4) {
+			background-color: rgb(252, 244, 217);
+		}
+
+		#ventajas > section:nth-of-type(2) {
+			background-color: rgb(252, 244, 217);
+		}
+
+		#ventajas > section:nth-of-type(1):before,
+		#ventajas > section:nth-of-type(3):before {
+			display: none;
+		}
+
+		#ventajas > section:nth-of-type(2):before,
+		#ventajas > section:nth-of-type(4):before {
+			display: none;
+		}
+
+			#ventajas > section:last-of-type > section > h2 {
+				font-size: 1.5em;
+			}
+
+		#galeria > h1 {
+			font-size: 2em;
+		}
+
+		#galeria > sub {
+			display   : block;
+			width     : 90%;
+			text-align: center;
+			font-size : 1.25em;
+		}
+
+		#galeria > section {
+			width: 90%;
+		}
+
+			#galeria > section > div {
+				width: 100%;
+			}
+
+			#clientes > section > section {
+				width: 90%;
+			}
+
+				#clientes > section > section > img {
+					max-width    : none;
+					width        : 75%;
+					margin       : auto;
+					margin-bottom: 16px;
+				}
+
+				#clientes > section > section > img:last-of-type {
+					margin-bottom: 0px;
+				}
+
+		#blog > h1 {
+			font-size: 2em;
+		}
+
+		#blog > sub {
+			font-size : 1.25em;
+			display   : block;
+			width     : 90%;
+			text-align: center;
+		}
+
+		#blog > main {
+			width: 90%;
+		}
+
+			#blog > main > article {
+				width: 100%;
+			}
+
+		body > footer > header > section > section:first-of-type {
+			width: 90%;
+		}
+
+			body > footer > section > section {
+				width          : 90%;
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+				flex-direction : column;
+			}
+
+				body > footer > section > section > section {
+					width: 100%;
+				}
+
+					body > footer > section > section > section:last-of-type > img {
+						height: auto;
+						width : 50%;
+					}
+}
